@@ -9,6 +9,8 @@ public class CharacterStats : MonoBehaviour {
     public float accuracy = 5;
     public float defence = 5;
     public float agility = 5;
+    public bool selected = false;
+    public bool target = false;
 
     private GameObject pawn;
 
@@ -58,6 +60,11 @@ public class CharacterStats : MonoBehaviour {
         health = health - dmg;
 
         Debug.Log("health: " + health);
+
+        if (health <= 0)
+        {
+            Destroy(pawn);
+        }
     }
 
 }
