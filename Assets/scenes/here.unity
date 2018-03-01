@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 252160735}
   - component: {fileID: 252160734}
   - component: {fileID: 252160736}
-  - component: {fileID: 252160737}
   - component: {fileID: 252160738}
   m_Layer: 0
   m_Name: SupBlue
@@ -221,19 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   target: {fileID: 974704817}
---- !u!114 &252160737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 252160732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  target: {fileID: 0}
 --- !u!61 &252160738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -381,6 +367,7 @@ GameObject:
   - component: {fileID: 526776089}
   - component: {fileID: 526776090}
   - component: {fileID: 526776091}
+  - component: {fileID: 526776092}
   m_Layer: 0
   m_Name: AssBlue
   m_TagString: enemy
@@ -458,6 +445,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   target: {fileID: 815833420}
+--- !u!61 &526776092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526776088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 0.85}
+    newSize: {x: 1.14, y: 0.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 0.85}
+  m_EdgeRadius: 0
 --- !u!1 &539060082
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +480,7 @@ GameObject:
   - component: {fileID: 539060083}
   - component: {fileID: 539060084}
   - component: {fileID: 539060085}
+  - component: {fileID: 539060086}
   m_Layer: 0
   m_Name: TankBlue
   m_TagString: enemy
@@ -544,7 +557,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  target: {fileID: 0}
+  target: {fileID: 1072322318}
+--- !u!61 &539060086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539060082}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.11, y: 0.86}
+    newSize: {x: 1.11, y: 0.86}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.11, y: 0.86}
+  m_EdgeRadius: 0
 --- !u!1 &815833420
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +593,7 @@ GameObject:
   - component: {fileID: 815833421}
   - component: {fileID: 815833422}
   - component: {fileID: 815833423}
+  - component: {fileID: 815833424}
   m_Layer: 0
   m_Name: AssRed
   m_TagString: Player
@@ -632,6 +671,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   target: {fileID: 526776088}
+--- !u!61 &815833424
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815833420}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.06, y: 0.94}
+    newSize: {x: 1.06, y: 0.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.06, y: 0.94}
+  m_EdgeRadius: 0
 --- !u!1 &974704817
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +879,7 @@ GameObject:
   - component: {fileID: 1072322319}
   - component: {fileID: 1072322320}
   - component: {fileID: 1072322321}
+  - component: {fileID: 1072322322}
   m_Layer: 0
   m_Name: TankRed
   m_TagString: Player
@@ -892,6 +957,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   target: {fileID: 539060082}
+--- !u!61 &1072322322
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072322318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.18, y: 0.92}
+    newSize: {x: 1.18, y: 0.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.18, y: 0.92}
+  m_EdgeRadius: 0
 --- !u!1 &1692309995
 GameObject:
   m_ObjectHideFlags: 0
