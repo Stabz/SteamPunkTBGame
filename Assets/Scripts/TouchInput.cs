@@ -2,29 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchInput : MonoBehaviour {
+public class TouchInput : MonoBehaviour
+{
 
-<<<<<<< HEAD
-=======
-
+    private AudioSource audioSource;
     bool Select;
 
->>>>>>> 8251ba052f715cad9bb503f8f3120f22217bb30a
-	// Use this for initialization
-	void Start () {
-		
-	}
-<<<<<<< HEAD
-	
-	// Update is called once per frame
-	void Update () {
-=======
+    // Use this for initialization
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
 
     // Update is called once per frame
     void Update()
     {
 
->>>>>>> 8251ba052f715cad9bb503f8f3120f22217bb30a
         for (int i = 0; i < Input.touchCount; i++)
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
@@ -33,25 +28,28 @@ public class TouchInput : MonoBehaviour {
 
                 var test = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
                 RaycastHit2D hit = Physics2D.Raycast(test, (Input.GetTouch(i).position));
-<<<<<<< HEAD
+
                 if (hit.collider && hit.collider.tag == "Player")
                 {
                     hit.collider.SendMessage("DealDmg");
+                    audioSource.Play();
                     Debug.Log("btn?");
                 }
+
+
+
+                /*
+
+                    if (hit.collider && hit.collider.tag == "sup")
+                    {
+                        hit.collider.SendMessage("ReceiveDmg");
+                        Debug.Log("Dmg?");
+                    }
+                }
+
+            }
+        }*/
             }
         }
     }
 }
-=======
-                if (hit.collider && hit.collider.tag == "sup")
-                {
-                    hit.collider.SendMessage("ReceiveDmg");
-                    Debug.Log("Dmg?");
-                }
-            }
-
-        }
-    }
-    }
->>>>>>> 8251ba052f715cad9bb503f8f3120f22217bb30a
