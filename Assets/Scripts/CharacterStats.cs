@@ -11,64 +11,31 @@ public class CharacterStats : MonoBehaviour {
     public float agility = 5;
     public bool selected = false;
     public bool target = false;
-
-    private GameObject pawn;
-    private GameObject pawn2;
     
 	void Start () {
 
-        pawn = GameObject.FindGameObjectWithTag("sup");
-        pawn2 = GameObject.FindGameObjectWithTag("enemy");
 
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        //DealDmg(this.strength, 5f);
-        //ReceiveDmg(5f);
 	}
 
-
-
-    private void DealDmg()
+    /// <summary>
+    /// Lowers health
+    /// </summary>
+    /// <param name="dmg"> The calculated damage from attacker </param>
+    /// <returns></returns>
+    public float Wound(float dmg)
     {
-        
-        this.accuracy = accuracy;
-        //the returning dmg
-        float dmg = 0;
-
-        //random number, use accuracy.
-        float hitChance = Random.Range(0,101);
-        hitChance = hitChance + accuracy;
-
-
-        if (hitChance>20)
-        {
-            dmg = strength * 1.1f;
-        }
-
-        //pawn.SendMessage("ReceiveDmg", dmg);
-
-        Debug.Log("hit");
-
-
-    }
-
-    private void ReceiveDmg(float incDmg)
-    {
-
-
-        float dmg = incDmg*(1-(this.defence/100));
+        dmg = dmg - defence;
 
         health = health - dmg;
 
-        Debug.Log("health: " + health);
-
-        if (health <= 0)
-        {
-            Destroy(pawn2);
-        }
+        return health;
     }
+
+    
 
 }

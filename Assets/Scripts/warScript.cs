@@ -5,6 +5,8 @@ using UnityEngine;
 public class warScript : MonoBehaviour {
 
     public int health = 10;
+    public int attack = 3;
+    public int defence = 2;
 
     public GameObject target;
 
@@ -20,14 +22,30 @@ public class warScript : MonoBehaviour {
 
     void DealDmg()
     {
-        target.SendMessage("RecieveDmg");
+        if (target != null)
+        {
+            target.SendMessage("RecieveDmg", attack);
+        }
     }
 
-    void RecieveDmg()
+    void RecieveDmg(int attack)
     {
         Debug.Log("Av for helvede");
-        health--;
-        if (health == 0) Destroy(this.gameObject);
+        int penetration = attack - defence;
+        if(penetration > 0)
+        {
+            health = health - penetration;
+            Debug.Log("Damage dealt: " + penetration);
+            Debug.Log("Health left: " + health);
+            if (target != null)
+            {
+                if (health == 0) Destroy(this.gameObject);
+            }
+        } else
+        {
+            Debug.Log("No damage was dealt");
+        }
+        
     }
 
 }

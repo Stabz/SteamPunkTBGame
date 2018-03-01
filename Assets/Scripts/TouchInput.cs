@@ -7,6 +7,7 @@ public class TouchInput : MonoBehaviour
 
     private AudioSource audioSource;
     bool Select;
+    private List<GameObject> targetList = new List<GameObject>();
 
     // Use this for initialization
     void Start()
@@ -29,12 +30,26 @@ public class TouchInput : MonoBehaviour
                 var test = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
                 RaycastHit2D hit = Physics2D.Raycast(test, (Input.GetTouch(i).position));
 
-                if (hit.collider && hit.collider.tag == "Player")
+                // Add hitcollider's GameObject to List
+                if (hit.collider.gameObject != null)
+                {
+                    targetList.Add(hit.collider.gameObject);
+                    Debug.Log(targetList[0] + " and " + targetList[1]);
+                }
+                
+
+
+                /* When two GameObjects have been added to the list check if their tags are player and enemy.
+                 * If this is true send message from the supRed gameobject 
+                */
+                if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
                 {
                     hit.collider.SendMessage("DealDmg");
                     audioSource.Play();
-                    Debug.Log("btn?");
+                    targetList.Clear();
                 }
+
+                targetList.Clear();
 
 
 
