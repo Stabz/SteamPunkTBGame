@@ -44,7 +44,7 @@ public class TouchInput : MonoBehaviour
                 */
                 if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
                 {
-                    hit.collider.SendMessage("DealDmg");
+                    targetList[0].SendMessage("DealDmg");
                     audioSource.Play();
                     targetList.Clear();
                 }
