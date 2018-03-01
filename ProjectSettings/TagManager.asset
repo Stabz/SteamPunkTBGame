@@ -6,7 +6,6 @@ TagManager:
   tags:
   - map
   - sup
-  - enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - Board Layer
+  - 
   - 
   - 
   - 

@@ -123,9 +123,10 @@ GameObject:
   - component: {fileID: 252160733}
   - component: {fileID: 252160735}
   - component: {fileID: 252160734}
+  - component: {fileID: 252160736}
   m_Layer: 0
   m_Name: SupBlue
-  m_TagString: sup
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 252160732}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78be28f4331c1b147a4d7dfa90e5d66f, type: 3}
   m_Name: 
@@ -159,6 +160,8 @@ MonoBehaviour:
   accuracy: 5
   defence: 5
   agility: 5
+  selected: 0
+  target: 0
 --- !u!212 &252160735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -203,6 +206,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &252160736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 252160732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 974704817}
 --- !u!1 &287914615
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,9 +340,10 @@ GameObject:
   m_Component:
   - component: {fileID: 526776089}
   - component: {fileID: 526776090}
+  - component: {fileID: 526776091}
   m_Layer: 0
   m_Name: AssBlue
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,6 +405,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &526776091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 526776088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 815833420}
 --- !u!1 &539060082
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,9 +427,10 @@ GameObject:
   m_Component:
   - component: {fileID: 539060083}
   - component: {fileID: 539060084}
+  - component: {fileID: 539060085}
   m_Layer: 0
   m_Name: TankBlue
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,6 +492,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &539060085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 539060082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 0}
 --- !u!1 &815833420
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,9 +514,10 @@ GameObject:
   m_Component:
   - component: {fileID: 815833421}
   - component: {fileID: 815833422}
+  - component: {fileID: 815833423}
   m_Layer: 0
   m_Name: AssRed
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,6 +579,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &815833423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815833420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 526776088}
 --- !u!1 &974704817
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,9 +602,10 @@ GameObject:
   - component: {fileID: 974704818}
   - component: {fileID: 974704820}
   - component: {fileID: 974704819}
+  - component: {fileID: 974704821}
   m_Layer: 0
   m_Name: SupRed
-  m_TagString: sup
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -570,7 +629,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 974704817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78be28f4331c1b147a4d7dfa90e5d66f, type: 3}
   m_Name: 
@@ -580,6 +639,8 @@ MonoBehaviour:
   accuracy: 5
   defence: 5
   agility: 5
+  selected: 0
+  target: 0
 --- !u!212 &974704820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -624,6 +685,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &974704821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 974704817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 252160732}
 --- !u!1 &978624536
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,9 +748,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1072322319}
   - component: {fileID: 1072322320}
+  - component: {fileID: 1072322321}
   m_Layer: 0
   m_Name: TankRed
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -738,6 +813,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1072322321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072322318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734384eead774b546a735d4967ee712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  target: {fileID: 539060082}
 --- !u!1 &1692309995
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,3 +907,124 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1978378396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1978378398}
+  - component: {fileID: 1978378397}
+  - component: {fileID: 1978378399}
+  m_Layer: 0
+  m_Name: TouchInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1978378397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978378396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080cac78c4748cf48914a74accc8d56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1978378398
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978378396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1978378399
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1978378396}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a35f79fde4647034dbc6b3777f9bc06e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
