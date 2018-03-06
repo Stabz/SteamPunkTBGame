@@ -8,6 +8,7 @@ public class TouchInput : MonoBehaviour
     private AudioSource audioSource;
     bool Select;
     private List<GameObject> targetList = new List<GameObject>();
+    public GameObject target;
 
     // Use this for initialization
     void Start()
@@ -36,20 +37,34 @@ public class TouchInput : MonoBehaviour
                     targetList.Add(hit.collider.gameObject);
                     Debug.Log(targetList[0] + " and " + targetList[1]);
                 }
-                
+
 
 
                 /* When two GameObjects have been added to the list check if their tags are player and enemy.
-                 * If this is true send message from the supRed gameobject 
+                 * If this is true send message from the "Player" tagged gameobject 
                 */
-                if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
+
+                if (targetList[0].tag == "enemy")
                 {
-                    targetList[0].SendMessage("DealDmg");
-                    audioSource.Play();
                     targetList.Clear();
                 }
+                else
+                {
+                    if (targetList.Count == 2)
+                    {
 
-                targetList.Clear();
+
+                        if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
+                        {
+                            targetList[0].SendMessage("DealDmg");
+                            audioSource.Play();
+                            targetList.Clear();
+                        }
+                        targetList.Clear();
+                    }
+                }
+
+                
 
 
 

@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 252160733}
   - component: {fileID: 252160735}
-  - component: {fileID: 252160734}
   - component: {fileID: 252160736}
   - component: {fileID: 252160738}
   m_Layer: 0
@@ -145,24 +144,6 @@ Transform:
   m_Father: {fileID: 287914616}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &252160734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 252160732}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78be28f4331c1b147a4d7dfa90e5d66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  strength: 5
-  accuracy: 5
-  defence: 5
-  agility: 5
-  selected: 0
-  target: 0
 --- !u!212 &252160735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,6 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 974704817}
 --- !u!61 &252160738
 BoxCollider2D:
@@ -444,6 +427,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 815833420}
 --- !u!61 &526776092
 BoxCollider2D:
@@ -557,6 +542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 1072322318}
 --- !u!61 &539060086
 BoxCollider2D:
@@ -670,6 +657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 526776088}
 --- !u!61 &815833424
 BoxCollider2D:
@@ -705,7 +694,6 @@ GameObject:
   m_Component:
   - component: {fileID: 974704818}
   - component: {fileID: 974704820}
-  - component: {fileID: 974704819}
   - component: {fileID: 974704821}
   - component: {fileID: 974704822}
   m_Layer: 0
@@ -728,24 +716,6 @@ Transform:
   m_Father: {fileID: 287914616}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &974704819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 974704817}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78be28f4331c1b147a4d7dfa90e5d66f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  strength: 5
-  accuracy: 5
-  defence: 5
-  agility: 5
-  selected: 0
-  target: 0
 --- !u!212 &974704820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -802,6 +772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 252160732}
 --- !u!61 &974704822
 BoxCollider2D:
@@ -956,6 +928,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  attack: 3
+  defence: 2
   target: {fileID: 539060082}
 --- !u!61 &1072322322
 BoxCollider2D:
