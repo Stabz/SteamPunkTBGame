@@ -8,7 +8,7 @@ public class warScript : MonoBehaviour {
     public int attack = 3;
     public int defence = 2;
 
-    public GameObject target;
+    //public GameObject target;
 
 	// Use this for initialization
 	void Start () {
@@ -22,10 +22,7 @@ public class warScript : MonoBehaviour {
 
     void DealDmg()
     {
-        if (target != null)
-        {
-            target.SendMessage("RecieveDmg", attack);
-        }
+            SendMessage("RecieveDmg", attack);
     }
 
     void RecieveDmg(int attack)
@@ -34,14 +31,16 @@ public class warScript : MonoBehaviour {
         int penetration = attack - defence;
         if(penetration > 0)
         {
+
             Debug.Log("Defense was penetrated");
             health = health - penetration;
             Debug.Log("Damage dealt: " + penetration);
             Debug.Log("Health left: " + health);
-            if (target != null)
-            {
-                if (health == 0) Destroy(this.gameObject);
+
+            if (health <= 0) { 
+                Destroy(this.gameObject);
             }
+
         } else
         {
             Debug.Log("No damage was dealt");

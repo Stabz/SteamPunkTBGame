@@ -30,6 +30,7 @@ public class TouchInput : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(test, (Input.GetTouch(i).position));
 
                 // Add hitcollider's GameObject to List
+                
                 if (hit.collider.gameObject != null)
                 {
                     targetList.Add(hit.collider.gameObject);
@@ -49,12 +50,14 @@ public class TouchInput : MonoBehaviour
                 else
                 {
                     if (targetList.Count == 2)
+                        target = targetList[1];
                     {
 
 
                         if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
                         {
-                            targetList[0].SendMessage("DealDmg");
+                            this.target = targetList[1];
+                            targetList[1].SendMessage("DealDmg");
                             audioSource.Play();
                             targetList.Clear();
                         }
