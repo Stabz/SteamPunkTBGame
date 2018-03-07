@@ -17,8 +17,6 @@ public class TouchInput : MonoBehaviour
     }
 
     // Update is called once per frame
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -64,21 +62,6 @@ public class TouchInput : MonoBehaviour
                     }
                 }
 
-                
-
-
-
-                /*
-
-                    if (hit.collider && hit.collider.tag == "sup")
-                    {
-                        hit.collider.SendMessage("ReceiveDmg");
-                        Debug.Log("Dmg?");
-                    }
-                }
-
-            }
-        }*/
             }
         }
     }
