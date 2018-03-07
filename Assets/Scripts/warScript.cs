@@ -34,6 +34,7 @@ public class warScript : MonoBehaviour {
         int penetration = attack - defence;
         if(penetration > 0)
         {
+            Debug.Log("Defense was penetrated");
             health = health - penetration;
             Debug.Log("Damage dealt: " + penetration);
             Debug.Log("Health left: " + health);
