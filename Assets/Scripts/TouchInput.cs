@@ -34,14 +34,11 @@ public class TouchInput : MonoBehaviour
                 if (hit.collider.gameObject != null)
                 {
                     targetList.Add(hit.collider.gameObject);
-                    Debug.Log(targetList[0] + " and " + targetList[1]);
+                    if (targetList.Count > 1)
+                    {
+                        Debug.Log(targetList[0] + " and " + targetList[1]);
+                    }
                 }
-
-
-
-                /* When two GameObjects have been added to the list check if their tags are player and enemy.
-                 * If this is true send message from the "Player" tagged gameobject 
-                */
 
                 if (targetList[0].tag == "enemy")
                 {
@@ -49,23 +46,35 @@ public class TouchInput : MonoBehaviour
                 }
                 else
                 {
-                    if (targetList.Count == 2)
-                        target = targetList[1];
-                    {
 
-
-                        if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
-                        {
-                            this.target = targetList[1];
-                            targetList[1].SendMessage("DealDmg");
-                            audioSource.Play();
-                            targetList.Clear();
-                        }
-                        targetList.Clear();
-                    }
+                    attackTouch();
                 }
 
             }
         }
     }
-}
+
+    void attackTouch()
+    {
+        /* When two GameObjects have been added to the list check if their tags are player and enemy.
+         * If this is true send message from the "Player" tagged gameobject 
+         */
+
+            if (targetList.Count == 2)
+                target = targetList[1];
+            {
+
+
+                if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
+                {
+                    this.target = targetList[1];
+                    targetList[1].SendMessage("DealDmg", targetList[0].GetComponent<warScript>().attack);
+                    audioSource.Play();
+                    targetList.Clear();
+                }
+                targetList.Clear();
+            }
+        }
+    }
+
+

@@ -20,12 +20,12 @@ public class warScript : MonoBehaviour {
 		
 	}
 
-    void DealDmg()
+    void DealDmg(int damage)
     {
-            SendMessage("RecieveDmg", attack);
+            SendMessage("RecieveDmg", damage);
     }
 
-    void RecieveDmg(int attack)
+    public void RecieveDmg(int attack)
     {
         Debug.Log("Av for helvede");
         int penetration = attack - defence;
