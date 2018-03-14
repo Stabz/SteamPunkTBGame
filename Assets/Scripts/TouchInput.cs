@@ -54,11 +54,12 @@ public class TouchInput : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// When two GameObjects have been added to the list check if their tags are player and enemy.
+    /// If this is true send message from the "Player" tagged gameobject 
+    /// </summary>
     void attackTouch()
     {
-        /* When two GameObjects have been added to the list check if their tags are player and enemy.
-         * If this is true send message from the "Player" tagged gameobject 
-         */
 
             if (targetList.Count == 2)
                 target = targetList[1];
