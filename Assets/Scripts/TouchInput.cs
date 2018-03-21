@@ -9,11 +9,24 @@ public class TouchInput : MonoBehaviour
     bool Select;
     private List<GameObject> targetList = new List<GameObject>();
     public GameObject target;
+    Animator anim;
+    
+
+
 
     // Use this for initialization
     void Start()
     {
+        target = GameObject.Find("Player_Skeleton");
+        anim = target.GetComponent<Animator>();
+        
+
         audioSource = GetComponent<AudioSource>();
+
+       
+        
+
+
     }
 
     // Update is called once per frame
@@ -46,8 +59,13 @@ public class TouchInput : MonoBehaviour
                 }
                 else
                 {
-
+                    
                     attackTouch();
+                    // anim.SetInteger("State", 1);
+                    
+
+
+
                 }
 
             }
@@ -70,11 +88,15 @@ public class TouchInput : MonoBehaviour
                 {
                     this.target = targetList[1];
                     targetList[1].SendMessage("DealDmg", targetList[0].GetComponent<warScript>().attack);
-                    audioSource.Play();
-                    targetList.Clear();
-                }
+                anim.SetInteger("State", 1);
+                audioSource.Play();               
+
                 targetList.Clear();
+                
             }
+                targetList.Clear();
+            
+        }
         }
     }
 

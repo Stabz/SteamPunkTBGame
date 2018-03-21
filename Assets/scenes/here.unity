@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 957625324}
   - component: {fileID: 957625323}
   - component: {fileID: 957625322}
+  - component: {fileID: 957625326}
   m_Layer: 0
   m_Name: Player_Skeleton
   m_TagString: Player
@@ -429,6 +430,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &957625326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957625320}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205a27747b49c4449aab86b233d505a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &978624536
 GameObject:
   m_ObjectHideFlags: 0
