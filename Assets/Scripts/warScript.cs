@@ -20,11 +20,20 @@ public class warScript : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// A function to easily call the RecieveDmg function, takes a int dmg variable.
+    /// </summary>
+    /// <param name="damage"></param>
     void DealDmg(int damage)
     {
             SendMessage("RecieveDmg", damage);
     }
-
+    
+    /// <summary>
+    /// RecieveDmg function, takes int attack variable
+    /// Function is used to calculate penetration calculates health after a hit.
+    /// </summary>
+    /// <param name="attack"></param>
     public void RecieveDmg(int attack)
     {
         Debug.Log("Av for helvede");
