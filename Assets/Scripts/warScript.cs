@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class warScript : MonoBehaviour {
 
-    public int health = 10;
-    public int attack = 3;
-    public int defence = 2;
-
-    //public GameObject target;
+    public float health = 10.0f;
+    public float attack = 3.0f;
+    public float defence = 2.0f;
+    public float range = 0.0f;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -20,15 +19,24 @@ public class warScript : MonoBehaviour {
 		
 	}
 
-    void DealDmg(int damage)
+    /// <summary>
+    /// A function to easily call the RecieveDmg function, takes a int dmg variable.
+    /// </summary>
+    /// <param name="damage"></param>
+    void DealDmg(float damage)
     {
             SendMessage("RecieveDmg", damage);
     }
-
-    public void RecieveDmg(int attack)
+    
+    /// <summary>
+    /// RecieveDmg function, takes int attack variable
+    /// Function is used to calculate penetration calculates health after a hit.
+    /// </summary>
+    /// <param name="attack"></param>
+    public void RecieveDmg(float attack)
     {
         Debug.Log("Av for helvede");
-        int penetration = attack - defence;
+        float penetration = attack - defence;
         if(penetration > 0)
         {
 
