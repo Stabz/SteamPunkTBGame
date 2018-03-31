@@ -17,9 +17,13 @@ public class TouchInput : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        target = GameObject.Find("Player_Skeleton");
-        anim = target.GetComponent<Animator>();
+        //target = GameObject.Find("Player_Skeleton");
+        // target = GameObject.Find("Player_Shield_Skeleton");        
+        //anim = target.GetComponent<Animator>();
         
+        
+
+
 
         audioSource = GetComponent<AudioSource>();
 
@@ -33,11 +37,13 @@ public class TouchInput : MonoBehaviour
     void Update()
     {
 
+        
+
         for (int i = 0; i < Input.touchCount; i++)
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
-                Debug.Log("Touch detected");
+                Debug.Log("Touch detected");               
 
                 var test = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
                 RaycastHit2D hit = Physics2D.Raycast(test, (Input.GetTouch(i).position));
@@ -50,6 +56,8 @@ public class TouchInput : MonoBehaviour
                     if (targetList.Count > 1)
                     {
                         Debug.Log(targetList[0] + " and " + targetList[1]);
+                        anim = targetList[0].GetComponent<Animator>();
+                        
                     }
                 }
 
@@ -59,10 +67,10 @@ public class TouchInput : MonoBehaviour
                 }
                 else
                 {
-                    
+                    anim.SetInteger("State", 0);
                     attackTouch();
-                    // anim.SetInteger("State", 1);
-                    
+                   
+
 
 
 
@@ -70,6 +78,7 @@ public class TouchInput : MonoBehaviour
 
             }
         }
+       
     }
 
     /// <summary>
@@ -82,22 +91,30 @@ public class TouchInput : MonoBehaviour
             if (targetList.Count == 2)
                 target = targetList[1];
             {
+            
 
-
-                if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
+            if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
                 {
                     this.target = targetList[1];
                     targetList[1].SendMessage("DealDmg", targetList[0].GetComponent<warScript>().attack);
-                anim.SetInteger("State", 1);
+                
+
+                anim.SetInteger("State", 1);         
+                
                 audioSource.Play();               
 
                 targetList.Clear();
                 
             }
-                targetList.Clear();
+                       
+            targetList.Clear();
             
+
+
         }
-        }
+        
+    }
+   
     }
 
 

@@ -9,10 +9,11 @@ public class warScript : MonoBehaviour {
     public float attack = 3.0f;
     public float defence = 2.0f;
     public float range = 0.0f;
+   
 
-	// Use this for initialization
-	void Start () {
-	}
+    // Use this for initialization
+    void Start () {       
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,7 +46,7 @@ public class warScript : MonoBehaviour {
             Debug.Log("Damage dealt: " + penetration);
             Debug.Log("Health left: " + health);
 
-            if (health <= 0) { 
+            if (health <= 0) {                
                 Destroy(this.gameObject);
             }
 
