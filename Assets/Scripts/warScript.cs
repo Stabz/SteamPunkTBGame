@@ -9,7 +9,8 @@ public class warScript : MonoBehaviour {
     public float attack = 3.0f;
     public float defence = 2.0f;
     public float range = 0.0f;
-   
+    Animator anim;
+
 
     // Use this for initialization
     void Start () {       
@@ -46,8 +47,10 @@ public class warScript : MonoBehaviour {
             Debug.Log("Damage dealt: " + penetration);
             Debug.Log("Health left: " + health);
 
-            if (health <= 0) {                
-                Destroy(this.gameObject);
+            if (health <= 0) {
+                anim = this.gameObject.GetComponent<Animator>();
+                anim.SetInteger("State",2);
+                Destroy(this.gameObject,5);
             }
 
         } else

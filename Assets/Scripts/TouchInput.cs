@@ -56,6 +56,7 @@ public class TouchInput : MonoBehaviour
                     if (targetList.Count > 1)
                     {
                         Debug.Log(targetList[0] + " and " + targetList[1]);
+
                         anim = targetList[0].GetComponent<Animator>();
                         
                     }
