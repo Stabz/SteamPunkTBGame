@@ -4,15 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveMerc : MonoBehaviour {
+
+    // variables
     private Vector3 targetPosition;
     private GameObject pawn;
     public float allowedDistance = 6;
 
+    // Merc action enum, used to describe the specific state of a Skeleton
     private enum MercAction
     {
         move,attack,standby
     }
 
+    // enum used to tell the game which step to take, first set a position and a move state.
     private enum GameSteps
     {
         setPos,Move
@@ -36,13 +40,13 @@ public class MoveMerc : MonoBehaviour {
     void Start () {
 
 
-        pawn = GameObject.FindGameObjectWithTag("sup");
-        state = MercAction.move;
-        proggression = GameSteps.setPos;
+        pawn = GameObject.FindGameObjectWithTag("Player");
+        /*state = MercAction.move;
+        proggression = GameSteps.setPos;*/
 
 
-        targetPosition.x = 2;
-        targetPosition.y = 5;
+        /*targetPosition.x = 2;
+        targetPosition.y = 5;*/
         
     }
 	
