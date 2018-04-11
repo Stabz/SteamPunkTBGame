@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 *.lock
 =======
 # Byte-compiled / optimized / DLL files
@@ -109,4 +109,4 @@ venv.bak/
 *.lock
 [Ss]teamPunkTBGame/[Tt]emp/UnityLockfile
 Temp/UnityLockfile
->>>>>>> refs/remotes/origin/master
+
