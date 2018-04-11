@@ -236,6 +236,7 @@ MonoBehaviour:
   health: 10
   attack: 3
   defence: 2
+  range: 0
 --- !u!95 &290196057
 Animator:
   serializedVersion: 3
@@ -369,6 +370,7 @@ MonoBehaviour:
   health: 10
   attack: 8
   defence: 2
+  range: 0
 --- !u!95 &957625324
 Animator:
   serializedVersion: 3
@@ -516,6 +518,7 @@ MonoBehaviour:
   health: 10
   attack: 3
   defence: 2
+  range: 0
 --- !u!61 &1337962588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -673,6 +676,7 @@ MonoBehaviour:
   health: 10
   attack: 3
   defence: 2
+  range: 0
 --- !u!95 &1624672016
 Animator:
   serializedVersion: 3
@@ -784,9 +788,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 53.5
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.872507
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -889,6 +893,7 @@ MonoBehaviour:
   health: 10
   attack: 3
   defence: 2
+  range: 0
 --- !u!61 &1960567339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1229,3 +1234,4 @@ MonoBehaviour:
   health: 10
   attack: 3
   defence: 2
+  range: 0
