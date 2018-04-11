@@ -30,6 +30,42 @@ public class BoardManager : MonoBehaviour {
     public GameObject[] playerCharacterList;
     public GameObject[] enemyCharacterList;
 
+    /* Arrays containing variables of x (e.g. x = floortiles)
+     * User this to create lists of GameObjects for the game */
+
+    public GameObject[] floorTiles; // floor tiles for the map
+    public GameObject[] outerWallTiles; // outer wall tiles, i.e. bounds.
+
+    private Transform boardHolder;
+    private List<Vector3> gridPositions = new List<Vector3>();
+
+    // Initialise gridPositions List that takes an x and y coordinate
+    void initialiseList()
+    {
+        gridPositions.Clear();
+
+        for (int x = 1; x < columns; x++)
+        {
+            for (int y = 1; y < rows; y++)
+            {
+                gridPositions.Add(new Vector3(x, y, 0.0f));
+            }
+        }
+    }
+
+    /* BoardSetup() method should intiialise a variable 
+     *  at a random floor tile within the floor tile array */
+    void BoardSetup()
+    {
+        boardHolder = new GameObject("Board").transform;
+        for (int x = -1; x < columns + 1; x++)
+        {
+            for (int y = -1; y < rows; y++)
+            {
+                // Initialise a variable to choose a random floor tile within the floor tile array.
+            }
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
