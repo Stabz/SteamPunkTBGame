@@ -7,6 +7,7 @@ TagManager:
   - map
   - sup
   - enemy
+  - next
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - den bedste
   - 
   - 
   - 

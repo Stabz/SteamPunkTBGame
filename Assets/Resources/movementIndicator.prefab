@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4053649005666806}
   - component: {fileID: 212041981280671996}
   - component: {fileID: 61751892920615752}
+  - component: {fileID: 95710476559938256}
   m_Layer: 0
   m_Name: movementIndicator
   m_TagString: movementIndicator
@@ -66,6 +67,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95710476559938256
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655876120858580}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &212041981280671996
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,9 +117,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300010, guid: fe705bf1943e18f45aed8fda2df1aebd, type: 3}
-  m_Color: {r: 0.9558824, g: 0.042171266, b: 0.4013544, a: 0.941}
+  m_Color: {r: 0.19215688, g: 0.3019608, b: 0.47450984, a: 0.966}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

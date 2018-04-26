@@ -7,28 +7,27 @@ public class MoveMerc : MonoBehaviour {
 
     // variables
     private Vector3 targetPosition;
-    private GameObject pawn;
+
+    GameObject[] MovementArray;
+    GameObject[] pawns;
+
+
+    private GameObject playerObject;
+
+
     public float allowedDistance = 6;
 
-    // Merc action enum, used to describe the specific state of a Skeleton
-    private enum MercAction
-    {
-        move,attack,standby
-    }
+    
 
     // enum used to tell the game which step to take, first set a position and a move state.
     private enum GameSteps
     {
-        setPos,Move
+        setPos,Move,standby
     }
+        
 
-    GameObject[] gameObjects;
-
-    private MercAction state;
 
     private GameSteps proggression;
-
-
 
     private int energy =3;
     public float speed = 10f;
@@ -38,82 +37,63 @@ public class MoveMerc : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        pawns = GameObject.FindGameObjectsWithTag("Player");
 
-
-        pawn = GameObject.FindGameObjectWithTag("Player");
-        /*state = MercAction.move;
-        proggression = GameSteps.setPos;*/
-
-
-        /*targetPosition.x = 2;
-        targetPosition.y = 5;*/
-        
+        proggression = GameSteps.standby;    
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        Debug.Log("our game step is " + proggression);
 
         if (proggression==GameSteps.setPos)
         {
 
            DrawMovementIndicator();
 
-            
-
             SetTargetPosition();
 
 
-
-
-
-            if (targetPosition.x != pawn.transform.position.x && targetPosition.y != pawn.transform.position.y)
+            if (targetPosition.x != playerObject.transform.position.x && targetPosition.y != playerObject.transform.position.y)
             {
 
-                gameObjects = GameObject.FindGameObjectsWithTag("movementIndicator");
+                MovementArray = GameObject.FindGameObjectsWithTag("movementIndicator");
 
                 if (gameObject != null)
                 {
-                    foreach (GameObject target in gameObjects)
+                    foreach (GameObject target in MovementArray)
                     {
                         GameObject.Destroy(target);
                     }
                 }
-
-
-                proggression = GameSteps.Move;
-                
-
+                proggression = GameSteps.Move;                
             }
-
-
-
-
         }
 
 
         if (proggression == GameSteps.Move)
         {
 
-
-
-            
-           
-
-
-
             Move();
 
             Debug.Log("getting ready to move");
             Debug.Log("targetpos: " + targetPosition);
-            Debug.Log("playerpos: " + pawn.transform.position);
+            Debug.Log("playerpos: " + playerObject.transform.position);
 
-
-            if (targetPosition.x == pawn.transform.position.x && targetPosition.y == pawn.transform.position.y)
+            for (int i = 0; i < pawns.Length; i++)
             {
-                proggression = GameSteps.setPos;
+                if (pawns[i].GetComponent<warScript>().isSelected == true)
+                {
+                    pawns[i].GetComponent<warScript>().isSelected = false;
+                }
             }
+
+            proggression = GameSteps.standby;
+
+        }
+
+        if(proggression == GameSteps.standby)
+        {
+
 
         }
 
@@ -121,26 +101,12 @@ public class MoveMerc : MonoBehaviour {
 
     private void Move()
     {
-        float x = pawn.transform.position.x;
-        float y = pawn.transform.position.y;
+        float x = playerObject.transform.position.x;
+        float y = playerObject.transform.position.y;
 
+        Debug.Log("target moving: " + playerObject.transform.position);
+            playerObject.transform.position = Vector3.MoveTowards(playerObject.transform.position, targetPosition, speed * Time.deltaTime);
 
-        var xDifference = x - targetPosition.x;
-        var yDifference = y - targetPosition.y;
-
-        float absXD = Math.Abs(xDifference);
-        float absYD = Math.Abs(yDifference);
-
-        //if(absXD+absYD < allowedDistance)
-        //{
-
-
-        Debug.Log("target moving: " + pawn.transform.position);
-            pawn.transform.position = Vector3.MoveTowards(pawn.transform.position, targetPosition, speed * Time.deltaTime);
-
-           
-            
-       // }
     }
 
 
@@ -161,31 +127,24 @@ public class MoveMerc : MonoBehaviour {
                 RaycastHit2D hit = Physics2D.Raycast(ray, (Input.GetTouch(i).position));
         
         
-        if (hit.collider && hit.collider.tag == "movementIndicator")
-        {
+                if (hit.collider && hit.collider.tag == "movementIndicator")
+                {
                            
+                    targetPosition = hit.point;
+
+                    roundedValX = (int) targetPosition.x;
+                    roundedValY = (int) targetPosition.y;
+
+                    targetPosition.x = roundedValX;
+                    targetPosition.y = roundedValY;
 
 
-            targetPosition = hit.point;
+                    Debug.Log("you hit movement indicator at " + targetPosition);
 
-            roundedValX = (int) targetPosition.x;
-            roundedValY = (int) targetPosition.y;
-
-            
-
-
-            targetPosition.x = roundedValX;
-            targetPosition.y = roundedValY;
-
-
-            Debug.Log("you hit movement indicator at " + targetPosition);
-
-        }
+                }
 
             }
         }
-
-
 
     }
 
@@ -197,8 +156,8 @@ public class MoveMerc : MonoBehaviour {
 
         for (int i = -4; i < 5; i++)
         {
-            float x = pawn.transform.position.x;
-            float y = pawn.transform.position.y;
+            float x = playerObject.transform.position.x;
+            float y = playerObject.transform.position.y;
 
 
             for (int j = 0; j < 5 + yFix; j++)
@@ -206,23 +165,16 @@ public class MoveMerc : MonoBehaviour {
 
                 enemyInstance2 = Instantiate(Resources.Load("movementIndicator")) as GameObject;
 
-
                 enemyInstance2.transform.Translate(new Vector3(x + i, y + j, 0));
 
                 enemyInstance2.transform.parent = transform;
 
 
-
                 enemyInstance3 = Instantiate(Resources.Load("movementIndicator")) as GameObject;
-
 
                 enemyInstance3.transform.Translate(new Vector3(x + i, y - j, 0));
 
                 enemyInstance3.transform.parent = transform;
-
-                
-
-
 
             }
             if (i < 0)
@@ -235,9 +187,5 @@ public class MoveMerc : MonoBehaviour {
                 yFix--;
             }
         }
-
     }
-
-      
-
 }

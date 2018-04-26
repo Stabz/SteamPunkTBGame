@@ -48,8 +48,10 @@ public class TouchInput : MonoBehaviour
                 var test = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
                 RaycastHit2D hit = Physics2D.Raycast(test, (Input.GetTouch(i).position));
 
-                // Add hitcollider's GameObject to List
                 
+
+                // Add hitcollider's GameObject to List
+
                 if (hit.collider.gameObject != null)
                 {
                     targetList.Add(hit.collider.gameObject);
@@ -70,12 +72,13 @@ public class TouchInput : MonoBehaviour
                 {
                     anim.SetInteger("State", 0);
                     attackTouch();
-                   
-
-
-
 
                 }
+
+                
+
+
+
 
             }
         }
@@ -97,15 +100,19 @@ public class TouchInput : MonoBehaviour
             if (targetList[0].tag == "Player" && targetList[1].tag == "enemy")
                 {
                     this.target = targetList[1];
+
+                if (Vector2.Distance(targetList[0].transform.position, targetList[1].transform.position) >= targetList[0].GetComponent<warScript>().range)
+                {
+                    Debug.Log("Not in range");
+                }
+                else
+                {
+
                     targetList[1].SendMessage("DealDmg", targetList[0].GetComponent<warScript>().attack);
-                
-
-                anim.SetInteger("State", 1);         
-                
-                audioSource.Play();               
-
-                targetList.Clear();
-                
+                    anim.SetInteger("State", 1);
+                    audioSource.Play();
+                    targetList.Clear();
+                }
             }
                        
             targetList.Clear();

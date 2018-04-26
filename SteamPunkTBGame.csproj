@@ -285,10 +285,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\next.cs" />
+    <Compile Include="Assets\Scripts\ArrowScript.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\CharacterStats.cs" />
+    <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\HealthBarScript.cs" />
     <Compile Include="Assets\Scripts\MoveMerc.cs" />
+    <Compile Include="Assets\Scripts\NextChar.cs" />
     <Compile Include="Assets\Scripts\Position.cs" />
     <Compile Include="Assets\Scripts\Sprites.cs" />
     <Compile Include="Assets\Scripts\TouchInput.cs" />

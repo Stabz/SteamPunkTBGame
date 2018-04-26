@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: 7a2de0671af09894c9c635303f3cd3ba
+timeCreated: 1523445613
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ground_textures_0
+    21300002: ground_textures_1
+    21300004: ground_textures_2
+    21300006: ground_textures_3
+    21300008: ground_textures_4
+    21300010: ground_textures_5
+    21300012: ground_textures_6
+    21300014: ground_textures_7
+    21300016: ground_textures_8
+    21300018: ground_textures_9
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ground_textures_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 199.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 199.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 199.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_3
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 199.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_4
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 199.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_7
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 0.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_8
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 0.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ground_textures_9
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 0.5
+        width: 199.8
+        height: 199.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -307, y: 200}
+      - {x: -308, y: 192}
+      - {x: -307, y: 191}
+      - {x: -307, y: 187}
+      - {x: -308, y: 186}
+      - {x: -308, y: 178}
+      - {x: -307, y: 177}
+      - {x: -307, y: 153}
+      - {x: -308, y: 152}
+      - {x: -308, y: 139}
+      - {x: -309, y: 138}
+      - {x: -309, y: 124}
+      - {x: -308, y: 123}
+      - {x: -308, y: 120}
+      - {x: -309, y: 118}
+      - {x: -308, y: 117}
+      - {x: -308, y: 114}
+      - {x: -309, y: 112}
+      - {x: -308, y: 111}
+      - {x: -308, y: 107}
+      - {x: -310, y: 105}
+      - {x: -310, y: 104}
+      - {x: -308, y: 102}
+      - {x: -312, y: 102}
+      - {x: -314, y: 100}
+      - {x: -314, y: 86}
+      - {x: -316, y: 86}
+      - {x: -318, y: 84}
+      - {x: -318, y: 76}
+      - {x: -316, y: 74}
+      - {x: -316, y: 64}
+      - {x: -315, y: 63}
+      - {x: -315, y: 61}
+      - {x: -316, y: 60}
+      - {x: -316, y: 54}
+      - {x: -315, y: 52}
+      - {x: -316, y: 51}
+      - {x: -316, y: 42}
+      - {x: -317, y: 41}
+      - {x: -317, y: 37}
+      - {x: -318, y: 36}
+      - {x: -319, y: 12}
+      - {x: -320, y: 11}
+      - {x: -320, y: 8}
+      - {x: -334, y: 8}
+      - {x: -336, y: 7}
+      - {x: -337, y: 8}
+      - {x: -351, y: 8}
+      - {x: -352, y: 9}
+      - {x: -355, y: 9}
+      - {x: -356, y: 10}
+      - {x: -360, y: 10}
+      - {x: -361, y: 9}
+      - {x: -371, y: 9}
+      - {x: -372, y: 10}
+      - {x: -383, y: 10}
+      - {x: -384, y: 11}
+      - {x: -387, y: 11}
+      - {x: -388, y: 12}
+      - {x: -409, y: 12}
+      - {x: -412, y: 14}
+      - {x: -416, y: 14}
+      - {x: -417, y: 13}
+      - {x: -422, y: 13}
+      - {x: -423, y: 14}
+      - {x: -435, y: 14}
+      - {x: -439, y: 16}
+      - {x: -444, y: 16}
+      - {x: -445, y: 15}
+      - {x: -446, y: 16}
+      - {x: -463, y: 16}
+      - {x: -464, y: 17}
+      - {x: -476, y: 17}
+      - {x: -477, y: 18}
+      - {x: -484, y: 18}
+      - {x: -485, y: 17}
+      - {x: -487, y: 17}
+      - {x: -488, y: 18}
+      - {x: -500, y: 18}
+      - {x: -500, y: -200}
+      - {x: 500, y: -200}
+      - {x: 500, y: 200}
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
